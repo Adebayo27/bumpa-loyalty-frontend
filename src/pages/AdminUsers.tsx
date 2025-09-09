@@ -103,7 +103,7 @@ const AdminUsers: React.FC = () => {
                 >
                   <td className="px-4 py-3 font-medium text-gray-900">{row.name}</td>
                   <td className="px-4 py-3 text-gray-700">{row.email}</td>
-                  <td className="px-4 py-3 text-indigo-700 font-semibold">{row.achievements?.length ?? 0}</td>
+                  <td className="px-4 py-3 text-indigo-700 font-semibold">{row.achievements?.filter(e => e.pivot.unlocked_at).length ?? 0}</td>
                   <td className="px-4 py-3 text-emerald-700">{row.badges?.map(b => b.name).join(', ') || '—'}</td>
                 </tr>
                 {expandedId === row.id && (
