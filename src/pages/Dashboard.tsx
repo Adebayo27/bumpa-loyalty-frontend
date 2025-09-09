@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
   const logout = useAuthStore((state) => state.logout);
   const navigate = useNavigate();
   const purchasePayload = {
-    user_id: 1,
+    user_id: userId,
     amount: Math.floor(Math.random() * 10000) + 1000,
     currency: "NGN",
     payload: {
